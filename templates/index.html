@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+ 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ 	
+</head>
+<body style="background-color:#56ce92;">
+
+	<header style="background-color:#287a6b;">
+		<div class="container">
+		<div id="brandname">
+			ML APP
+		</div>
+		<h2>BANK LOAN DEFAULTER PREDICTION</h2>
+		
+	</div>
+	</header>
+
+
+<section>
+    <div class="container mt-6">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+             <iframe
+			    allow="microphone;"
+			    width="350"
+			    height="430"
+			    src="https://console.dialogflow.com/api-client/demo/embedded/17aa3cac-7fa8-4156-8f3d-d02c607cf9d6">
+				</iframe>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            
+             	<div >
+				<form  method="POST" action="{{ url_for('predict')}}">
+				<label><b>Applicant income:  &nbsp &nbsp &nbsp</b></label>
+				 &nbsp<input type="text" name="a">
+				<br>
+				<label><b>Co-Applicant income:      &nbsp </b></label>
+				<input type="text" name="b"><br>
+				<label><b>Loan Amount: &nbsp &nbsp       &nbsp &nbsp &nbsp &nbsp &nbsp</b></label>
+				<input type="text" name="c"><br>
+				<label><b>Term:        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</b></label>
+				<input type="text" name="d"><br>
+				<label><b>Credit History:      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</b></label>
+				<input type="text" name="e"><br>
+				<br>
+				 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+				<input   type="submit" class=" btn btn-small waves-effect waves-dark" value="PREDICT">
+				
+				</form>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+</html>
+
+
+<!-- <iframe
+    allow="microphone;"
+    width="350"
+    height="430"
+    src="https://console.dialogflow.com/api-client/demo/embedded/17aa3cac-7fa8-4156-8f3d-d02c607cf9d6">
+</iframe> -->
+
+	<!-- <div class="ml-container">
+	 
+		<div class="container" >
+			 	<iframe
+			    allow="microphone;"
+			    width="350"
+			    height="430"
+			    src="https://console.dialogflow.com/api-client/demo/embedded/17aa3cac-7fa8-4156-8f3d-d02c607cf9d6">
+				</iframe> 
+			<div >
+				<form  method="POST" action="{{ url_for('predict')}}">
+				Applicant income<input type="text" name="a">
+				<br>
+				Co applicant income <input type="text" name="b"><br>
+				loan amount<input type="text" name="c"><br>
+				term<input type="text" name="d"><br>
+				Credit History<input type="text" name="e"><br>
+				
+				<input type="submit" class=" btn btn-small waves-effect waves-dark" value="PREDICT">
+				
+				</form>
+			</div>
+		</div>
+	</div> -->

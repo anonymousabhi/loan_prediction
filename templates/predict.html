@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body style="background-color:#56ce92;">
+
+	<header style="background-color:#287a6b;">
+		<div class="container">
+		<div id="brandname">
+			ML APP
+		</div>
+		<h2>BANK LOAN DEFAULTER PREDICTION</h2>
+		
+	</div>
+	</header>
+	<!-- <p style="color:blue;font-size:20;text-align: center;"><b></b></p> -->
+	
+	<section>
+    <div class="container mt-6">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+             <iframe
+			    allow="microphone;"
+			    width="350"
+			    height="430"
+			    src="https://console.dialogflow.com/api-client/demo/embedded/17aa3cac-7fa8-4156-8f3d-d02c607cf9d6">
+				</iframe>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            
+             	<div >
+				<div class="results">
+	{% if prediction == 1%}
+	<h2 style="color:#10332c;">YES! YOU ARE ALLOWED TO TAKE THE LOAN</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:#10332c;">WE ARE SORRY WE CANNOT GIVE YOU LOAN ACCORDING TO YOUR CURRENT DATA</h2>
+	{% endif %}
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<!-- <div class="results">
+	{% if prediction == 1%}
+	<h2 style="color:red;">YES</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;">NO</h2>
+	{% endif %}
+
+	</div> -->
+
+</body>
+</html>
+<!-- <iframe
+    allow="microphone;"
+    width="350"
+    height="430"
+    src="https://console.dialogflow.com/api-client/demo/embedded/17aa3cac-7fa8-4156-8f3d-d02c607cf9d6">
+</iframe> -->

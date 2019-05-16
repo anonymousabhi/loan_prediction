@@ -32,7 +32,7 @@ X = array[:,6:11]
 Y = array[:,12]
 Y=Y.astype('int')
 x_train, x_test, y_train, y_test = model_selection.train_test_split(X, Y, test_size=0.2, random_state=7)
-
+'''
 model = LogisticRegression()
 model.fit(x_train,y_train)
 predictions = model.predict(x_test)
@@ -41,11 +41,12 @@ print(accuracy_score(y_test, predictions))
 import pickle
 filename = 'finalized_model.pkl'
 pickle.dump(model, open(filename, 'wb'))
-''''
+'''
 model = DecisionTreeClassifier()
 model.fit(x_train,y_train)
 predictions = model.predict(x_test)
 print(accuracy_score(y_test, predictions))
+print(model.predict([[4564,0.0,67,180,1]]))
 '''
 model.predict([[4564,0.0,67,180,1]])
 
@@ -56,3 +57,4 @@ result = loaded_model.score(x_test, y_test)
 
 print(loaded_model.predict([[4564,0.0,67,180,1]]))
 
+'''
